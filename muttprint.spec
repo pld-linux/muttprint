@@ -1,8 +1,8 @@
 Summary:	Formats the output of mail clients to a good-looking printing
 Summary(pl):	Program formatuj±cy wyj¶cie klientów pocztowych w dobrze wygl±daj±cy wydruk
 Name:		muttprint
-Version:	0.61
-Release:	2
+Version:	0.63a
+Release:	0.2
 License:	GPL
 Group:		Applications/Printing
 Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/muttprint/%{name}-%{version}.tar.gz
@@ -26,9 +26,10 @@ wydruk.
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-    prefix=$RPM_BUILD_ROOT%{_prefix}
-    mandir=$RPM_BUILD_ROOT%{_mandir}
-    sharedir=$RPM_BUILD_ROOT%{_datadir}
+    prefix=$RPM_BUILD_ROOT%{_prefix} \
+    mandir=$RPM_BUILD_ROOT%{_mandir} \
+    sharedir=$RPM_BUILD_ROOT%{_datadir} \
+    docdir=$RPM_BUILD_ROOT%{_defaultdocdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -50,6 +51,9 @@ rm -rf $RPM_BUILD_ROOT
 %lang(fr) %{_libdir}/muttprint/translation-fr.pl
 %lang(it) %{_libdir}/muttprint/translation-it.pl
 %lang(pl) %{_libdir}/muttprint/translation-pl.pl
+%lang(si) %{_libdir}/muttprint/translation-si.pl
+%lang(sv) %{_libdir}/muttprint/translation-sv.pl
+%{_libdir}/muttprint/translation-example.pl
 
 %doc doc/manual/en/manual-en
 %lang(de) %doc doc/manual/de/manual-de
