@@ -37,7 +37,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README* CHANGES
-%attr(755, root, root) %{_bindir}/muttprint
+%attr(755,root,root) %{_bindir}/muttprint
+%dir %{_datadir}/muttprint
 %{_datadir}/muttprint/*.eps
 %{_datadir}/muttprint/README.pics
 
@@ -64,6 +65,6 @@ rm -rf $RPM_BUILD_ROOT
 %lang(it) %doc doc/manual/it/manual-it
 
 %{_mandir}/man1/*
-%lang(de) %doc %{_mandir}/de/man1/*
-%lang(es) %doc %{_mandir}/es/man1/*
-%lang(it) %doc %{_mandir}/it/man1/*
+%lang(de) %{_mandir}/de/man1/*
+%lang(es) %{_mandir}/es/man1/*
+%lang(it) %{_mandir}/it/man1/*
