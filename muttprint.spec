@@ -5,8 +5,8 @@ Version:	0.72
 Release:	1
 License:	GPL
 Group:		Applications/Printing
-# Source0-md5:	239c3fd51db6ebf7afc221a23c9a6a7b
 Source0:	http://dl.sourceforge.net/muttprint/%{name}-%{version}.tar.gz
+# Source0-md5:	30d7d9628dc2a86b365be57ac89c9233
 URL:		http://muttprint.sourceforge.net/
 Requires:	psutils
 Requires:	tetex-latex
