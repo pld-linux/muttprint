@@ -30,14 +30,12 @@ rm -rf $RPM_BUILD_ROOT
     mandir=$RPM_BUILD_ROOT%{_mandir}
     sharedir=$RPM_BUILD_ROOT%{_datadir}
 
-gzip -9nf README* CHANGES
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README* CHANGES
 %attr(755, root, root) %{_bindir}/muttprint
 %{_datadir}/muttprint
 
