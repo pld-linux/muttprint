@@ -1,7 +1,7 @@
 Summary:	Formats the output of mail clients to a good-looking printing
 Summary(pl):	Program formatuj±cy wyj¶cie klientów pocztowych w dobrze wygl±daj±cy wydruk
 Name:		muttprint
-Version:	0.53a
+Version:	0.61
 Release:	1
 License:	GPL
 Group:		Applications/Printing
@@ -28,21 +28,36 @@ rm -rf $RPM_BUILD_ROOT
     mandir=$RPM_BUILD_ROOT%{_mandir}
     sharedir=$RPM_BUILD_ROOT%{_datadir}
 
-gzip -9nf README
+gzip -9nf README* CHANGES
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc *.gz
 %attr(755, root, root) %{_bindir}/muttprint
 %{_datadir}/muttprint
 
-%doc doc/manual/muttprint-doc-en.html
-%lang(es) %doc doc/manual/muttprint-doc-es.html
-%lang(it) %doc doc/manual/muttprint-doc-it.html
-%lang(de) %doc doc/manual/muttprint-doc-de.html
+%doc sample-muttprintrc-en
+%lang(de) %doc sample-muttprintrc-de
+%lang(es) %doc sample-muttprintrc-es
+%lang(it) %doc sample-muttprintrc-it
+
+%lang(cs) %{_libdir}/muttprint/translation-cs.pl
+%lang(de) %{_libdir}/muttprint/translation-de.pl
+%lang(es) %{_libdir}/muttprint/translation-es.pl
+%lang(fr) %{_libdir}/muttprint/translation-fr.pl
+%lang(it) %{_libdir}/muttprint/translation-it.pl
+%lang(pl) %{_libdir}/muttprint/translation-pl.pl
+
+%doc doc/manual/en/manual-en
+%lang(de) %doc doc/manual/de/manual-de
+%lang(es) %doc doc/manual/es/manual-es
+%lang(it) %doc doc/manual/it/manual-it
+
 %{_mandir}/man1/*
+%lang(cs) %doc %{_mandir}/cs/man1/*
+%lang(de) %doc %{_mandir}/de/man1/*
 %lang(es) %doc %{_mandir}/es/man1/*
 %lang(it) %doc %{_mandir}/it/man1/*
-%lang(de) %doc %{_mandir}/de/man1/*
