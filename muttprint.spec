@@ -5,8 +5,6 @@ Version:	0.53a
 Release:	1
 License:	GPL
 Group:		Applications/Printing
-Group(de):	Applikationen/Drucken
-Group(pl):	Aplikacje/Drukowanie
 Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/muttprint/%{name}-%{version}.tar.gz
 URL:		http://muttprint.sourceforge.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
