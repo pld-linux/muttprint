@@ -5,7 +5,7 @@ Version:	0.64
 Release:	1
 License:	GPL
 Group:		Applications/Printing
-Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/muttprint/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/muttprint/%{name}-%{version}.tar.gz
 URL:		http://muttprint.sourceforge.net/
 Requires:	tetex-latex
 Requires:	psutils
