@@ -1,12 +1,12 @@
 Summary:	Formats the output of mail clients to a good-looking printing
 Summary(pl):	Program formatuj±cy wyj¶cie klientów pocztowych w dobrze wygl±daj±cy wydruk
 Name:		muttprint
-Version:	0.72b
+Version:	0.72c
 Release:	1
 License:	GPL
 Group:		Applications/Printing
 Source0:	http://dl.sourceforge.net/muttprint/%{name}-%{version}.tar.gz
-# Source0-md5:	164dfffc800744df1eb99ce0e033edee
+# Source0-md5:	b3e99f8f6f37c0711f6e20f8cf3ef6cb
 URL:		http://muttprint.sourceforge.net/
 Requires:	perl-Text-Iconv
 Requires:	psutils
@@ -47,6 +47,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README* CHANGES
 %attr(755,root,root) %{_bindir}/muttprint
+%attr(755,root,root) %{_bindir}/muttprint-langinfo
 %dir %{_datadir}/muttprint
 %{_datadir}/muttprint/*.eps
 %{_datadir}/muttprint/README.pics
