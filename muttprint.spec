@@ -1,7 +1,7 @@
 Summary:	Formats the output of mail clients to a good-looking printing
 Summary(pl):	Program formatuj±cy wyj¶cie klientów pocztowych w dobrze wygl±daj±cy wydruk
 Name:		muttprint
-Version:	0.64
+Version:	0.70
 Release:	1
 License:	GPL
 Group:		Applications/Printing
@@ -38,23 +38,25 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README* CHANGES
 %attr(755, root, root) %{_bindir}/muttprint
-%{_datadir}/muttprint
+%{_datadir}/muttprint/*.eps
+%{_datadir}/muttprint/README.pics
 
 %doc sample-muttprintrc-en
 %lang(de) %doc sample-muttprintrc-de
 %lang(es) %doc sample-muttprintrc-es
 %lang(it) %doc sample-muttprintrc-it
 
-%dir %{_libdir}/muttprint
-%lang(cs) %{_libdir}/muttprint/translation-cs.pl
-%lang(de) %{_libdir}/muttprint/translation-de.pl
-%lang(es) %{_libdir}/muttprint/translation-es.pl
-%lang(fr) %{_libdir}/muttprint/translation-fr.pl
-%lang(it) %{_libdir}/muttprint/translation-it.pl
-%lang(pl) %{_libdir}/muttprint/translation-pl.pl
-%lang(si) %{_libdir}/muttprint/translation-si.pl
-%lang(sv) %{_libdir}/muttprint/translation-sv.pl
-%{_libdir}/muttprint/translation-example.pl
+%dir %{_datadir}/muttprint/translations
+%lang(cs) %{_datadir}/muttprint/translations/translation-cs.pl
+%lang(de) %{_datadir}/muttprint/translations/translation-de.pl
+%lang(es) %{_datadir}/muttprint/translations/translation-es.pl
+%lang(fr) %{_datadir}/muttprint/translations/translation-fr.pl
+%lang(it) %{_datadir}/muttprint/translations/translation-it.pl
+%lang(pl) %{_datadir}/muttprint/translations/translation-pl.pl
+%lang(ru) %{_datadir}/muttprint/translations/translation-ru.pl
+%lang(sl) %{_datadir}/muttprint/translations/translation-sl.pl
+%lang(sv) %{_datadir}/muttprint/translations/translation-sv.pl
+%{_datadir}/muttprint/translations/translation-example.pl
 
 %doc doc/manual/en/manual-en
 %lang(de) %doc doc/manual/de/manual-de
@@ -62,7 +64,6 @@ rm -rf $RPM_BUILD_ROOT
 %lang(it) %doc doc/manual/it/manual-it
 
 %{_mandir}/man1/*
-%lang(cs) %doc %{_mandir}/cs/man1/*
 %lang(de) %doc %{_mandir}/de/man1/*
 %lang(es) %doc %{_mandir}/es/man1/*
 %lang(it) %doc %{_mandir}/it/man1/*
