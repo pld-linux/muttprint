@@ -7,8 +7,8 @@ License:	GPL
 Group:		Applications/Printing
 Source0:	http://dl.sourceforge.net/muttprint/%{name}-%{version}.tar.gz
 URL:		http://muttprint.sourceforge.net/
-Requires:	tetex-latex
 Requires:	psutils
+Requires:	tetex-latex
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -26,10 +26,10 @@ wydruk.
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-    prefix=$RPM_BUILD_ROOT%{_prefix} \
-    mandir=$RPM_BUILD_ROOT%{_mandir} \
-    sharedir=$RPM_BUILD_ROOT%{_datadir} \
-    docdir=$RPM_BUILD_ROOT%{_defaultdocdir}/%{name}-%{version}
+	prefix=$RPM_BUILD_ROOT%{_prefix} \
+	mandir=$RPM_BUILD_ROOT%{_mandir} \
+	sharedir=$RPM_BUILD_ROOT%{_datadir} \
+	docdir=$RPM_BUILD_ROOT%{_defaultdocdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -45,6 +45,7 @@ rm -rf $RPM_BUILD_ROOT
 %lang(es) %doc sample-muttprintrc-es
 %lang(it) %doc sample-muttprintrc-it
 
+%dir %{_libdir}/muttprint
 %lang(cs) %{_libdir}/muttprint/translation-cs.pl
 %lang(de) %{_libdir}/muttprint/translation-de.pl
 %lang(es) %{_libdir}/muttprint/translation-es.pl
