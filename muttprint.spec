@@ -8,6 +8,7 @@ Group:		Applications/Printing
 Source0:	http://dl.sourceforge.net/muttprint/%{name}-%{version}.tar.gz
 # Source0-md5:	eda4de2a2777795ddb1a5b59f810bb29
 URL:		http://muttprint.sourceforge.net/
+Requires:	perl-Text-Iconv
 Requires:	psutils
 Requires:	tetex-latex
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
