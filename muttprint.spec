@@ -38,7 +38,7 @@ rm -rf $RPM_BUILD_ROOT
 	prefix=$RPM_BUILD_ROOT%{_prefix} \
 	mandir=$RPM_BUILD_ROOT%{_mandir} \
 	sharedir=$RPM_BUILD_ROOT%{_datadir} \
-	docdir=$RPM_BUILD_ROOT%{_defaultdocdir}/%{name}-%{version}
+	docdir=$RPM_BUILD_ROOT%{_docdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
