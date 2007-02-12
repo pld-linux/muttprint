@@ -1,5 +1,5 @@
 Summary:	Formats the output of mail clients to a good-looking printing
-Summary(pl):	Program formatuj±cy wyj¶cie klientów pocztowych w dobrze wygl±daj±cy wydruk
+Summary(pl.UTF-8):   Program formatujÄ…cy wyjÅ›cie klientÃ³w pocztowych w dobrze wyglÄ…dajÄ…cy wydruk
 Name:		muttprint
 Version:	0.72c
 Release:	1
@@ -17,8 +17,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Muttprint formats the output of mail clients to a good-looking
 printing.
 
-%description -l pl
-Muttprint formatuje wyj¶cie klientów pocztowych w dobrze wygl±daj±cy
+%description -l pl.UTF-8
+Muttprint formatuje wyjÅ›cie klientÃ³w pocztowych w dobrze wyglÄ…dajÄ…cy
 wydruk.
 
 %prep
