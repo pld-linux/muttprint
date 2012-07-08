@@ -41,7 +41,8 @@ wydruk.
 %{__autoconf}
 %{__automake}
 %configure
-%{__make}
+# doc/manual build races
+%{__make} -j1
 
 %install
 rm -rf $RPM_BUILD_ROOT
